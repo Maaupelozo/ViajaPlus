@@ -9,40 +9,25 @@
   <!-- End of HubSpot Embed Code -->
 </head>
 <body>
-    <div class="header">
-        <div class="logo">
-            <img alt="Company Logo" height="40" src="./assets/Red and Blue Modern Logistic Creative Logo.png" width="100"/>
-        </div>
-        <!-- <div class="contact">
-            <i class="fas fa-phone-alt"></i>
-            <div>Atención personalizada</div>
-            <a href="tel:+5493624941613">Llámanos (+54 9 3 624 941 613)</a>
-        </div> -->
-        <div class="faq">
-            <i class="fas fa-question-circle"></i>
-            <div>FAQ</div>
-        </div>
-    </div>
-
     <!-- Navbar y Header con contenedor de reservas -->
     <div class="navbar">
-        <a href="#">
-            <i class="fas fa-home"></i>
-            Localización
-        </a>
-        <a href="#">
-            <i class="fas fa-box"></i>
-            Paquetes
-        </a>
-        <a class="active" href="#">
-            <i class="fas fa-car"></i>
-            Colectivos
-        </a>
-        <a href="#">
-            <i class="fas fa-shield-alt"></i>
-            Seguros
-        </a>
-    </div>
+      <div class="logo">
+        <img class="logo" src="./assets/logo.png" alt="">
+      </div>
+      <div class="hamburger" onclick="toggleMenu()">
+          <i class="fas fa-bars"></i>
+      </div>
+      <div class="menu" id="menu">
+          <a href="#">Plan de viaje</a>
+          <a href="#">Viajar en Andesmar</a>
+          <a href="#">Corporativo</a>
+          <a href="#">Atención al cliente</a>
+          <div class="language">
+              <i class="fas fa-globe"></i>
+              <a href="#">ES</a>
+          </div>
+      </div>
+  </div>
 
     <div class="carousel">
         <img alt="A yellow toy van on a sandy beach with the text 'Summer Time' in a retro font"
@@ -201,10 +186,10 @@
           </div>
           <div class="box">
               <div class="image">
-                  <img src="assets/chaco.jpg" alt="">
+                  <img src="./assets/Bariloche.png" alt="">
               </div>
               <div class="content">
-                  <h3>Interior del Chaco</h3>
+                  <h3>Bariloche</h3>
                   <a href="#">saber más<i class="fas fa-angle-right"></i></a>
               </div>
           </div>
@@ -213,7 +198,7 @@
                 <img src="assets/chaco.jpg" alt="">
             </div>
             <div class="content">
-                <h3>Interior del Chaco</h3>
+                <h3>Patagonia</h3>
                 <a href="#">saber más<i class="fas fa-angle-right"></i></a>
             </div>
         </div>
@@ -222,16 +207,16 @@
               <img src="assets/chaco.jpg" alt="">
           </div>
           <div class="content">
-              <h3>Interior del Chaco</h3>
+              <h3>Mendoza</h3>
               <a href="#">saber más<i class="fas fa-angle-right"></i></a>
           </div>
       </div>
       <div class="box">
         <div class="image">
-            <img src="assets/chaco.jpg" alt="">
+            <img src="./assets/cataratas.png" alt="">
         </div>
         <div class="content">
-            <h3>Interior del Chaco</h3>
+            <h3>Misiones</h3>
             <a href="#">saber más<i class="fas fa-angle-right"></i></a>
         </div>
     </div>
@@ -239,6 +224,35 @@
       </div>
 
   </section>
+<!--seccion del interior del chaco -->
+
+<section class="turismo-seccion">
+  <div class="turismo-container">
+    <!-- Sección del anuncio -->
+    <div class="turismo-paquete">
+      <div class="turismo-anuncio">
+        <img src="./assets/interior1.jpg" alt="Publicidad Andesmar">
+        <a href="https://turismoandesmar.com"></a>
+      </div>
+    </div>
+
+    <!-- Tarjetas con imágenes -->
+    <div class="turismo-tarjetas">
+      <a href="https://enlace-buenos-aires.com" class="tarjeta-ciudad">
+        <img src="./assets/interior2.jpg" alt="Buenos Aires">
+      </a>
+      <a href="https://enlace-cordoba.com" class="tarjeta-ciudad">
+        <img src="./assets/interior3.jpg" alt="Córdoba">
+      </a>
+      <a href="https://enlace-mendoza.com" class="tarjeta-ciudad tarjeta-grande">
+        <img src="./assets/interior4.jpg" alt="Mendoza">
+      </a>
+    </div>
+  </div>
+</section>
+
+
+  
 
   <footer class="footer">
       <div class="container2">
@@ -269,7 +283,9 @@
    </footer>
       
  <!-- Start of HubSpot Embed Code -->
+  <script src="./js/app.js"></script>
  <script type="text/javascript" id="hs-script-loader" async defer src="//js-na1.hs-scripts.com/47398269.js"></script>
  <!-- End of HubSpot Embed Code -->
+
 </body>
 </html>

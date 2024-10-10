@@ -39,27 +39,74 @@ body {
 }
 
 /* Navbar */
+
 .navbar {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background-color: white;
-  padding: 10px 0;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #007bff;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;
 }
-.navbar a {
-  text-decoration: none;
-  color: #888;
-  font-size: 14px;
-  text-align: center;
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
 }
-.navbar a.active {
-  color: #ff00ff;
+.navbar .menu {
+    display: flex;
+    align-items: center;
+    z-index: 1;
 }
-.navbar a i {
-  display: block;
-  font-size: 24px;
-  margin-bottom: 5px;
+.navbar .menu a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    position: relative;
+    z-index: 1;
+}
+.navbar .menu a:hover {
+    text-decoration: underline;
+}
+.navbar .menu a::after {
+    content: '\f0d7';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    margin-left: 5px;
+}
+.navbar .menu .language {
+    display: flex;
+    align-items: center;
+}
+.navbar .menu .language i {
+    margin-right: 5px;
+}
+.hamburger {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+@media (max-width: 768px) {
+    .navbar .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #007bff;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        z-index: 1;
+    }
+    .navbar .menu a {
+        margin: 10px 0;
+        text-align: center;
+        z-index: 1;
+    }
+    .hamburger {
+        display: block;
+        z-index: 1;
+    }
 }
 
 /* banner y contenedor de busqueda */
@@ -316,5 +363,115 @@ body {
   .card {
       width: 100%;
       max-width: 100%;
+  }
+}
+
+/* seccion del interior del chaco*/
+
+.turismo-seccion {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background-color: #f0f0f0;
+}
+
+.turismo-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.turismo-paquete {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.turismo-anuncio {
+  background-color: #e0f7f8;
+  border-radius: 10px;
+  padding: 40px; /* Incrementa el padding para hacerla más destacada */
+  text-align: center;
+}
+
+.turismo-anuncio h1 {
+  font-size: 28px; /* Aumenta el tamaño de la fuente del texto principal */
+  color: #0073e6;
+  margin-bottom: 20px;
+}
+
+.turismo-anuncio img {
+  width: 100%;
+  margin: 20px 0;
+  max-width: 300px;
+}
+
+.turismo-anuncio a {
+  color: #0073e6;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.turismo-tarjetas {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 20px;
+}
+
+.tarjeta-ciudad {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.tarjeta-ciudad img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.tarjeta-ciudad:hover img {
+  transform: scale(1.05);
+}
+
+.overlay-texto {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.overlay-texto h2 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.overlay-texto span {
+  background-color: #e53935;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  margin-top: 10px;
+  display: inline-block;
+}
+.tarjeta-grande {
+  grid-column: span 2;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .turismo-container {
+    grid-template-columns: 1fr;
+  }
+
+  .turismo-tarjetas {
+    grid-template-columns: 1fr;
   }
 }
